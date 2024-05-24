@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk as FontSans } from "next/font/google";
 import { Section, Container } from "@/components/craft";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
+
 import Logo from "@/public/logo.svg";
 import Balancer from "react-wrap-balancer";
 
@@ -53,6 +55,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
