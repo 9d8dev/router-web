@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Space_Grotesk as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 import "./globals.css";
 
 import { Button } from "@/components/ui/button";
-import { NavMenu } from "@/components/nav/nav-menu";
-import { MobileNav } from "@/components/nav/mobile-nav";
+// import { NavMenu } from "@/components/nav/nav-menu";
+// import { MobileNav } from "@/components/nav/mobile-nav";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 
-import Logo from "@/public/logo.svg";
+import Name from "@/public/name.svg";
+import Icon from "@/public/icon.svg";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -61,27 +62,32 @@ const Nav = ({ className, children, id }: NavProps) => {
         id="nav-container"
         className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
       >
-        <Link
-          className="hover:opacity-75 transition-all flex gap-2 items-center"
-          href="/"
-        >
-          <h2 className="sr-only">Craft UI</h2>
-          <Image
-            src={Logo}
-            alt="Logo"
-            className="invert dark:invert-0"
-            width={84}
-            height={30.54}
-          ></Image>
+        <Link href="https://app.router.so" className="dark:invert">
+          <div className="flex group gap-4 items-center justify-center">
+            <Image
+              className="group-hover:animate-spin"
+              src={Icon}
+              width={24}
+              height={24}
+              alt="Router.so Icon"
+            />
+            <Image
+              className="pb-1"
+              src={Name}
+              width={148}
+              height={24}
+              alt="Router.so Wordmark"
+            />
+          </div>
         </Link>
         {children}
         <div className="flex items-center gap-2">
-          <NavMenu />
+          {/* <NavMenu /> */}
           <ThemeToggle />
           <Button asChild className="hidden sm:flex">
             <Link href="https://9d8.dev">Get Started</Link>
           </Button>
-          <MobileNav />
+          {/* <MobileNav /> */}
         </div>
       </div>
     </nav>
