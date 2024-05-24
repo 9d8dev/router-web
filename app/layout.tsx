@@ -89,7 +89,7 @@ const Nav = ({ className, children, id }: NavProps) => {
           {/* <NavMenu /> */}
           <ThemeToggle />
           <Button asChild className="hidden sm:flex">
-            <Link href="https://9d8.dev">Get Started</Link>
+            <Link href="https://app.router.so">Get Started</Link>
           </Button>
           {/* <MobileNav /> */}
         </div>
