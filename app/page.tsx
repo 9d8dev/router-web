@@ -1,5 +1,6 @@
 import { Main, Section, Container } from "@/components/craft";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import Image from "next/image";
 import Light from "@/public/light.png";
@@ -10,7 +11,8 @@ export default function Home() {
     <Main>
       <Section>
         <Container>
-          <h1>Manage your forms and capture leads.</h1>
+          <Badge variant="outline">Currently in development</Badge>
+          <h1 className="pt-6">Manage your forms and capture leads.</h1>
           <h2 className="!mt-0">
             Router.so is headless{" "}
             <span className="underline underline-offset-4 decoration-muted-foreground decoration-wavy">
